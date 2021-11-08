@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemberRegist.html</title>
+    <style>
+          table{
+        border-color: #d9e0e6;
+        font-size: medium;
+        font-family: Georgia, "Malgun Gothic", serif;
+    }
+    td{
+        width: 900;
+    }
+    </style>
+   
+</head>
+
+<body>
+    <table border-spacing: 1px; style="text-align: left; color: ;" text="맑은고딕" size='13' border="1px" 
+    height="300" >
+            <tr>
+                <th bgcolor='#d9e0e6'>*아이디</th>
+                <td width="600" size="4" style="font-size: small; color: #95a0ab;"><input type="text" size="10">&nbsp;<input type="button" 
+                   style="background: black; color: white;" value="중복확인">
+                   + 4~15자, 첫 영문자, 영문자와 숫자 조합</td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*비밀번호</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*비밀번호확인</th>
+                <td style="font-size:small; color: #95a0ab;"><input type="text">
+                    (확인을 위해 다시 입력해 주세요)</td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*이름</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*생년월일</th>
+                <td style="font-size:small; color: #000000;"><input type="radio" name="gender" value="M" checked>남자
+                    <input type="radio" name="gender" value="W">여자 &nbsp; 
+                    <input type="text" size="3">년<input type="text" size="1">월
+                    <input type="text" size="1">일 &nbsp; 
+                    (예, 2000년 01월 31일)</td>
+                   
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*이메일</th>
+                <td size='3' width=80%><input type="text">@<input type="text">
+                    <form action="" style="font-size: small;">
+                        <select name="email">
+                            <option value="naver" selected>naver.com</option>
+                            <option value="daum">daum.net</option>
+                            <option value="nate" >nate.com</option>
+                            <option value="google">google.com</option>
+                        </form>
+                        <form name="sms">
+                            <input type="radio" name="okey" value="y" 
+                            />수신허용
+                            &nbsp;&nbsp;
+                            <input type="radio" name="gender" value="W"
+                            checked />수신불가
+                             <br>
+                        </form>
+                </td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>&nbsp;주소</th>
+                <td style="font-size: small;">
+                    <input type="button" onclick="DaumPostcode()" value="주소찾기" style="color: white; background-color: black;">
+                    <input type="text" size="10" name="wPostCode" id="postcode" placeholder="" readonly="readonly" onclick="DaumPostcode()">
+                    (우편번호)
+                    <br /><span id="guide" style="color:#999;font-size:10px;"></span>  
+                    <br /><input type="text" name="wRestAddress" placeholder="" size="70" /> 
+                    <br /><br /><input type="text" name="wRestAddress" placeholder="" size="70" />
+                    &nbsp;+나머지주소
+                </td>
+                <tr>
+                    <th bgcolor='#d9e0e6'>&nbsp;전화번호</th>
+                    <td><input type="text" size="2">-<input type="text" size="4">
+                        -<input type="text" size="4">
+                    </td>
+                </tr>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*휴대전화</th>
+                <td><input type="text" size="2">-<input type="text" size="4">
+                    -<input type="text" size="4">
+                    <form name="sms" style="font-size: small;">
+                        <input type="radio" name="okey" value="y"
+                        checked     />SMS 수신허용
+                        &nbsp;&nbsp;
+                        <input type="radio" name="gender" value="W"
+                         />SMS 수신불가
+                         <br>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*관심분야</th>
+                    <td><form action="">
+                        <!--select>option*5 -->
+                        <select name="route">
+                            <option value="main" selected>::관심분야 선택::</option>
+                            <option value="internet" >인터넷광고</option>
+                            <option value="search">검색</option>
+                            <option value="friends" >지인추천</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <th bgcolor='#d9e0e6'>*가입경로</th>
+                <td><form action="">
+                    <!--select>option*5 -->
+                    <select name="route">
+                        <option value="main" selected>::가입경로 선택::</option>
+                        <option value="internet" >인터넷광고</option>
+                        <option value="search">검색</option>
+                        <option value="friends" >지인추천</option>
+                    </select>
+                </form></td>
+            </tr>
+            <tr>
+                <!-- <td style="center">
+                    <button style="background-color: red; color: white; ">등록하기</button>&nbsp;<button style="background-color: black; color: white;">새로 쓰기</button>
+                </td> -->
+                <center>
+                    <!-- <td></td> -->
+                    <td colspan="2">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button style="background-color: red; color: white; ">등록하기</button></button>&nbsp;<button style="background-color: black; color: white;">새로 쓰기</button></td>
+                </center>
+            </tr>
+
+    </table>
+</body>
+</html>
